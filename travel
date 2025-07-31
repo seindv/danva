@@ -1,0 +1,75 @@
+// pages/index.tsx
+import * as React from 'react';
+import Head from 'next/head';
+
+export default function Home() {
+  return (
+    <React.Fragment>
+      <Head>
+        <title>Danva Travel | Conectando personas con sus sueños</title>
+        <meta
+          name="description"
+          content="Descubre experiencias únicas con Danva Travel. Paquetes a Europa, Disney, F1 y más."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className="min-h-screen bg-[#F9F5EE] text-[#002233] font-sans">
+        <section className="flex flex-col items-center justify-center py-24 text-center px-6">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Conectando personas <br /> con sus sueños
+          </h1>
+          <p className="text-xl md:text-2xl mb-10 max-w-2xl">
+            Vive experiencias inolvidables con nuestros paquetes exclusivos a Europa, Disney, F1 México y más.
+          </p>
+          <a
+            href="#paquetes"
+            className="inline-block text-white bg-[#00BCC2] hover:bg-[#00a0a5] px-8 py-4 rounded-2xl text-lg shadow-md"
+          >
+            Cotiza tu viaje ahora
+          </a>
+        </section>
+
+        <section id="paquetes" className="py-16 px-6 bg-white text-[#002233]">
+          <h2 className="text-3xl font-semibold mb-8 text-center">Paquetes destacados</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="border rounded-xl shadow p-4">
+              <h3 className="text-xl font-bold mb-2">Europa Soñada</h3>
+              <p className="text-sm">
+                Madrid, París, Roma y Mónaco en 17 días. Desde $7.000.000 COP
+              </p>
+            </div>
+            <div className="border rounded-xl shadow p-4">
+              <h3 className="text-xl font-bold mb-2">Disney & Miami</h3>
+              <p className="text-sm">
+                Diversión en familia. Incluye parques y alojamiento. Desde $5.500.000 COP
+              </p>
+            </div>
+            <div className="border rounded-xl shadow p-4">
+              <h3 className="text-xl font-bold mb-2">F1 México 2025</h3>
+              <p className="text-sm">
+                Vive la adrenalina en el GP de México. Desde $6.200.000 COP
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#002233] text-white py-16 px-6">
+          <h2 className="text-3xl font-semibold text-center mb-8">
+            ¿Por qué elegir Danva Travel?
+          </h2>
+          <ul className="max-w-3xl mx-auto list-disc list-inside text-lg space-y-2">
+            <li>Asesoría personalizada</li>
+            <li>Planes flexibles y a crédito</li>
+            <li>Atención por WhatsApp y chat web</li>
+            <li>Viajes grupales y experiencias únicas</li>
+          </ul>
+        </section>
+
+        <footer className="bg-[#F9F5EE] text-[#002233] text-center py-8 text-sm">
+          © {new Date().getFullYear()} Danva Travel. Todos los derechos reservados.
+        </footer>
+      </main>
+    </React.Fragment>
+  );
+}
